@@ -1,0 +1,42 @@
+duo {
+   display: inline-block;
+   width: auto;
+   padding: 32px 64px;
+   background: $color-offwhite;
+   color: $color-black;
+   text-align: center;
+   @include borderRadius(4px);
+
+   progress[value] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 24px;
+      width: 250px;
+
+      &::-webkit-progress-bar {
+         background-color: $color-grey-light;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+         @include borderRadius(12px);
+      }
+
+      &::-webkit-progress-value {
+         background: #3a3a3a; /* Old browsers */
+         background: -moz-linear-gradient(top, #3a3a3a 0%, #3a3a3a 32%, #bc2f00 34%, #bc2f00 68%, #f4cd1d 70%, #f4cd1d 100%); /* FF3.6-15 */
+         background: -webkit-linear-gradient(top, #3a3a3a 0%,#3a3a3a 32%,#bc2f00 34%,#bc2f00 68%,#f4cd1d 70%,#f4cd1d 100%); /* Chrome10-25,Safari5.1-6 */
+         background: linear-gradient(to bottom, #3a3a3a 0%,#3a3a3a 32%,#bc2f00 34%,#bc2f00 68%,#f4cd1d 70%,#f4cd1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#f4cd1d',GradientType=0 ); /* IE6-9 */
+         @include borderRadius(12px);
+         -webkit-box-shadow: 2px 0px 5px -3px rgba(0,0,0,0.59);
+         -moz-box-shadow: 2px 0px 5px -3px rgba(0,0,0,0.59);
+         box-shadow: 2px 0px 5px -3px rgba(0,0,0,0.59);
+      }
+   }
+
+   h2 {
+      padding-top: 0 !important;
+   }
+
+   p {
+      margin-top: 16px;
+   }
+}
