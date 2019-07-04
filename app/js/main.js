@@ -38,7 +38,7 @@ function dataDuo() {
            cache: false,
            dataType: "json",
            data: JSON.stringify(data),
-           headers: {},
+           headers: {"Access-Control-Allow-Origin": "https://toshibot.github.io/duodata" },
            error: function (jqXHR) {
                  console.log("ajax error " + jqXHR.status);
            }
