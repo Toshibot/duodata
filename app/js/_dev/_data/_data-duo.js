@@ -3,9 +3,9 @@
 // Data - Fixture/Results
 
 function dataDuo() {
-    $.getJSON('https://www.duolingo.com/2017-06-30/users?username=Tardesh&_=1562161200287', function(json){
+    $.getJSON('https://www.duolingo.com/2017-06-30/users/118369997?fields=courses', function(json){
 
-        var course = json.users[0].courses[0];
+        var course = json.courses[0];
         var course_name = course.title;
         var crowns = course.crowns;
         var xp = course.xp;
